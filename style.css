@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #5E4B8B; /* Jewel tone purple */
+    color: #fff;
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #2A6F97; /* Jewel blue */
+    color: white;
+  }
+  
+  .hero .btn {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #F4D35E; /* Soft yellow */
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .hero .btn.secondary {
+    background-color: #7A8450; /* Olive green */
+    color: #fff;
+  }
+  
+  .services {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .service-card {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #5E4B8B;
+    color: #fff;
+    font-size: 0.9rem;
+  }
