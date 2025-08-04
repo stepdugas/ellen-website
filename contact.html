@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Ellen Berkman Productivity Solutions</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
 </head>
 <body class="theme-contact">
   <div id="header"></div>
 
   <main>
-    <h1>Contact</h1>
-    <p>Ready to take the first step toward a more productive and organized life? Get in touch with Ellen today.</p>
-    <p>Email: <a href="mailto:info@ellenberkman.com">info@ellenberkman.com</a></p>
-    <p>Phone: (555) 555-5555</p>
-    <a href="#" class="btn">Schedule a Free Consultation</a>
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Get In Touch</h1>
+        <p class="lead">Ready to take the first step? Let's schedule a consultation.</p>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="content-section">
+      <div class="container contact-form-wrapper">
+        <div class="contact-intro">
+          <img src="ellen-headshot.png" alt="Ellen Berkman" class="ellen-headshot" />
+          <div>
+            <h2>Schedule Your Consultation</h2>
+            <p>Please fill out the form below and I'll get back to you within 24–48 hours to schedule our initial consultation. All fields marked with an asterisk (*) are required.</p>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+
+          <div class="form-group">
+            <label for="preferredContact">Preferred Contact Method *</label>
+            <select id="preferredContact" name="preferredContact" required>
+              <option value="">Please select</option>
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+              <option value="text">Text Message</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <div id="footer"></div>
