@@ -37,6 +37,42 @@
     --text-color: #333333;
   }
   
+  .theme-meet-ellen {
+    --primary-color: #F2C8D0;  /* Rose Pink */
+    --secondary-color: #333333;
+    --text-color: #333333;
+  }
+  
+  .theme-career-coaching {
+    --primary-color: #C65D2E;  /* Copper Clay */
+    --secondary-color: #ffffff;
+    --text-color: #ffffff;
+  }
+  
+  .theme-adhd-organization {
+    --primary-color: #8FBC8F;  /* Sage Green */
+    --secondary-color: #ffffff;
+    --text-color: #ffffff;
+  }
+  
+  .theme-student-success {
+    --primary-color: #D94F32;  /* Rejuvenate */
+    --secondary-color: #ffffff;
+    --text-color: #ffffff;
+  }
+  
+  .theme-productivity-coaching {
+    --primary-color: #8FBC8F;  /* Sage Green */
+    --secondary-color: #ffffff;
+    --text-color: #ffffff;
+  }
+  
+  .theme-coaching-process {
+    --primary-color: #317873;  /* Deep Teal */
+    --secondary-color: #ffffff;
+    --text-color: #ffffff;
+  }
+  
   /* ===============================
      Reset & Base Styles
      =============================== */
@@ -219,22 +255,90 @@
   }
   
   /* ===============================
-     Contact Section
+     Contact Page Layout
      =============================== */
-  .contact {
-    padding: 3rem 2rem;
-    text-align: center;
-    background-color: #C65D2E;
-    color: #fff;
+  .contact-form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
   
-  .contact a.btn {
-    background-color: #F4D35E;
+  .contact-intro {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .ellen-headshot {
+    max-width: 150px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .contact-form {
+    flex: 1 1 60%;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .contact-info-sidebar {
+    flex: 1 1 35%;
+    background-color: #fff;
     color: #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .contact a.btn:hover {
-    background-color: #e4c24f;
+  .contact-info-sidebar h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  input, select, textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button.btn {
+    background-color: #2A6FB1;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.btn:hover {
+    background-color: #1c4f80;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   
   /* ===============================
@@ -269,5 +373,19 @@
   
     .service-grid {
       grid-template-columns: 1fr;
+    }
+  
+    .contact-form-wrapper {
+      flex-direction: column;
+    }
+  
+    .contact-intro {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .ellen-headshot {
+      margin-bottom: 1rem;
     }
   }

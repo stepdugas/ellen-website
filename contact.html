@@ -19,7 +19,7 @@
       </div>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- Contact Section -->
     <section class="content-section">
       <div class="container contact-form-wrapper">
         <div class="contact-intro">
@@ -30,39 +30,110 @@
           </div>
         </div>
 
-        <form id="contactForm" class="contact-form">
-          <div class="form-group">
-            <label for="firstName">First Name *</label>
-            <input type="text" id="firstName" name="firstName" required />
-          </div>
+        <div class="two-column-layout">
+          <!-- Contact Form -->
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
 
-          <div class="form-group">
-            <label for="lastName">Last Name *</label>
-            <input type="text" id="lastName" name="lastName" required />
-          </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
 
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" />
-          </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
 
-          <div class="form-group">
-            <label for="preferredContact">Preferred Contact Method *</label>
-            <select id="preferredContact" name="preferredContact" required>
-              <option value="">Please select</option>
-              <option value="email">Email</option>
-              <option value="phone">Phone</option>
-              <option value="text">Text Message</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label for="preferredContact">Preferred Contact Method *</label>
+              <select id="preferredContact" name="preferredContact" required>
+                <option value="">Please select</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="text">Text Message</option>
+              </select>
+            </div>
 
-          <button type="submit" class="btn">Submit</button>
-        </form>
+            <div class="form-group">
+              <label for="serviceInterest">Service Interest *</label>
+              <select id="serviceInterest" name="serviceInterest" required>
+                <option value="">Please select</option>
+                <option value="adhd-coaching">ADHD Coaching</option>
+                <option value="executive-function">Executive Function Coaching</option>
+                <option value="productivity">Productivity Coaching</option>
+                <option value="organization">Professional Organizing</option>
+                <option value="academic">Academic Coaching</option>
+                <option value="career">Career Coaching</option>
+                <option value="multiple">Multiple Services</option>
+                <option value="unsure">Not Sure - Need Guidance</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="consultationType">Consultation Type *</label>
+              <select id="consultationType" name="consultationType" required>
+                <option value="">Please select</option>
+                <option value="virtual">Virtual (Video Call)</option>
+                <option value="phone">Phone Call</option>
+                <option value="in-person">In-Person (if available)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="availability">Preferred Days/Times</label>
+              <input type="text" id="availability" name="availability" placeholder="e.g., Weekday mornings, Tuesday afternoons" />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="challenges">What challenges are you currently facing? *</label>
+              <textarea id="challenges" name="challenges" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="goals">What would you like to achieve through coaching?</label>
+              <textarea id="goals" name="goals" rows="4"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="referralSource">How did you hear about me?</label>
+              <input type="text" id="referralSource" name="referralSource" />
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="newsletter" name="newsletter" />
+                I'd like to receive Ellen's newsletter with ADHD tips and resources
+              </label>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+
+          <!-- Sidebar -->
+          <div class="contact-info-sidebar">
+            <h3>Other Ways to Connect</h3>
+            <p>While I prefer initial contact through this form, you can also reach me at:</p>
+            <p><strong>Email:</strong> info@ellenberkman.com</p>
+            <p><strong>Response Time:</strong> I typically respond within 24–48 hours during business days.</p>
+
+            <h3>What Happens Next?</h3>
+            <ol>
+              <li>I'll review your information and get back to you within 24–48 hours</li>
+              <li>We'll schedule a brief 15-minute phone call to discuss your needs</li>
+              <li>If we're a good fit, we'll book your initial consultation</li>
+              <li>You'll receive intake forms to complete before our first session</li>
+            </ol>
+          </div>
+        </div>
       </div>
     </section>
   </main>
