@@ -2,143 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Ellen Berkman Productivity Solutions</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Ellen - Career & Executive Function Coach</title>
+  <meta name="description" content="Schedule a free consultation with Ellen Berkman, career and executive function coach." />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="theme-contact">
-  <div id="header"></div>
+<body class="page-contact">
 
-  <main>
-    <!-- Hero Section -->
-    <section class="page-hero">
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <nav class="main-navigation">
       <div class="container">
-        <h1>Get In Touch</h1>
-        <p class="lead">Ready to take the first step? Let's schedule a consultation.</p>
+        <div class="nav-wrapper">
+          <div class="logo"><a href="/">Ellen Berkman</a></div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="has-dropdown">
+              <a href="coaching.html">Coaching</a>
+              <ul class="dropdown-menu">
+                <li><a href="coaching.html#executive-function">Executive Function</a></li>
+                <li><a href="coaching.html#career-coaching">Career</a></li>
+                <li><a href="coaching.html#academic-coaching">Academic</a></li>
+                <li><a href="coaching.html#process">Coaching Process</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="meet-ellen.html">Meet Ellen</a>
+              <ul class="dropdown-menu">
+                <li><a href="meet-ellen.html#background">Background</a></li>
+                <li><a href="meet-ellen.html#approach">Approach</a></li>
+                <li><a href="meet-ellen.html#why">Why I Love What I Do</a></li>
+                <li><a href="meet-ellen.html#contact">Contact</a></li>
+              </ul>
+            </li>
+            <li><a href="costs.html">Costs</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+          <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
+        </div>
       </div>
-    </section>
+    </nav>
+  </header>
 
-    <!-- Contact Section -->
-    <section class="content-section">
-      <div class="container contact-form-wrapper">
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p class="lead">Please schedule a free 30 minute consultation if you would like to talk more.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="contact-form-wrapper">
         <div class="contact-intro">
-          <img src="ellen-headshot.png" alt="Ellen Berkman" class="ellen-headshot" />
-          <div>
-            <h2>Schedule Your Consultation</h2>
-            <p>Please fill out the form below and I'll get back to you within 24–48 hours to schedule our initial consultation. All fields marked with an asterisk (*) are required.</p>
-          </div>
+          <h2>Schedule Your Free Consultation</h2>
+          <p>Fill out the form and Ellen will respond within 24–48 hours on business days.</p>
         </div>
 
-        <div class="two-column-layout">
-          <!-- Contact Form -->
-          <form id="contactForm" class="contact-form">
-            <div class="form-group">
-              <label for="firstName">First Name *</label>
-              <input type="text" id="firstName" name="firstName" required />
-            </div>
-
-            <div class="form-group">
-              <label for="lastName">Last Name *</label>
-              <input type="text" id="lastName" name="lastName" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-
-            <div class="form-group">
-              <label for="preferredContact">Preferred Contact Method *</label>
-              <select id="preferredContact" name="preferredContact" required>
-                <option value="">Please select</option>
-                <option value="email">Email</option>
-                <option value="phone">Phone</option>
-                <option value="text">Text Message</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="serviceInterest">Service Interest *</label>
-              <select id="serviceInterest" name="serviceInterest" required>
-                <option value="">Please select</option>
-                <option value="adhd-coaching">ADHD Coaching</option>
-                <option value="executive-function">Executive Function Coaching</option>
-                <option value="productivity">Productivity Coaching</option>
-                <option value="organization">Professional Organizing</option>
-                <option value="academic">Academic Coaching</option>
-                <option value="career">Career Coaching</option>
-                <option value="multiple">Multiple Services</option>
-                <option value="unsure">Not Sure - Need Guidance</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="consultationType">Consultation Type *</label>
-              <select id="consultationType" name="consultationType" required>
-                <option value="">Please select</option>
-                <option value="virtual">Virtual (Video Call)</option>
-                <option value="phone">Phone Call</option>
-                <option value="in-person">In-Person (if available)</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="availability">Preferred Days/Times</label>
-              <input type="text" id="availability" name="availability" placeholder="e.g., Weekday mornings, Tuesday afternoons" />
-            </div>
-
-            <div class="form-group full-width">
-              <label for="challenges">What challenges are you currently facing? *</label>
-              <textarea id="challenges" name="challenges" rows="4" required></textarea>
-            </div>
-
-            <div class="form-group full-width">
-              <label for="goals">What would you like to achieve through coaching?</label>
-              <textarea id="goals" name="goals" rows="4"></textarea>
-            </div>
-
-            <div class="form-group full-width">
-              <label for="referralSource">How did you hear about me?</label>
-              <input type="text" id="referralSource" name="referralSource" />
-            </div>
-
-            <div class="form-group checkbox-group">
-              <label>
-                <input type="checkbox" id="newsletter" name="newsletter" />
-                I'd like to receive Ellen's newsletter with ADHD tips and resources
-              </label>
-            </div>
-
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-
-          <!-- Sidebar -->
-          <div class="contact-info-sidebar">
-            <h3>Other Ways to Connect</h3>
-            <p>While I prefer initial contact through this form, you can also reach me at:</p>
-            <p><strong>Email:</strong> info@ellenberkman.com</p>
-            <p><strong>Response Time:</strong> I typically respond within 24–48 hours during business days.</p>
-
-            <h3>What Happens Next?</h3>
-            <ol>
-              <li>I'll review your information and get back to you within 24–48 hours</li>
-              <li>We'll schedule a brief 15-minute phone call to discuss your needs</li>
-              <li>If we're a good fit, we'll book your initial consultation</li>
-              <li>You'll receive intake forms to complete before our first session</li>
-            </ol>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
           </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="preferredContact">Preferred Contact Method *</label>
+            <select id="preferredContact" name="preferredContact" required>
+              <option value="">Please select</option>
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+              <option value="text">Text Message</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="serviceInterest">Service Interest *</label>
+            <select id="serviceInterest" name="serviceInterest" required>
+              <option value="">Please select</option>
+              <option value="adhd-coaching">ADHD Coaching</option>
+              <option value="executive-function">Executive Function Coaching</option>
+              <option value="productivity">Productivity Coaching</option>
+              <option value="academic">Academic Coaching</option>
+              <option value="career">Career Coaching</option>
+              <option value="multiple">Multiple Services</option>
+              <option value="unsure">Not Sure - Need Guidance</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="consultationType">Consultation Type *</label>
+            <select id="consultationType" name="consultationType" required>
+              <option value="">Please select</option>
+              <option value="virtual">Virtual (Video Call)</option>
+              <option value="phone">Phone Call</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="availability">Preferred Days/Times</label>
+            <input type="text" id="availability" name="availability" placeholder="e.g., Weekday mornings, Tues/Thurs afternoons">
+          </div>
+
+          <div class="form-group full-width">
+            <label for="challenges">What challenges are you currently facing? *</label>
+            <textarea id="challenges" name="challenges" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="goals">What would you like to achieve through coaching?</label>
+            <textarea id="goals" name="goals" rows="4"></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="referralSource">How did you hear about me?</label>
+            <input type="text" id="referralSource" name="referralSource">
+          </div>
+
+          <div class="form-group full-width checkbox-group">
+            <label>
+              <input type="checkbox" id="newsletter" name="newsletter">
+              I'd like to receive Ellen's newsletter with ADHD tips and resources
+            </label>
+          </div>
+
+          <div class="form-message" id="formMessage"></div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <div class="contact-info-sidebar">
+          <h3>Other Ways to Connect</h3>
+          <p>Email: <a href="mailto:ellen@ellenberkman.com">ellen@ellenberkman.com</a></p>
+          <p>Phone: <a href="tel:4122546445">412.254.6445</a></p>
+          <p>Response time: usually within 24–48 hours (Mon–Fri).</p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <div id="footer"></div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ellen Berkman. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
+  <script src="contact-form.js"></script>
 </body>
 </html>
