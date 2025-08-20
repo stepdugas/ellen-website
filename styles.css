@@ -10,7 +10,6 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
 }
 
 .container {
@@ -162,7 +161,6 @@ a:hover {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
@@ -675,7 +673,6 @@ section {
 /* Content Section */
 .content-section {
   padding: 60px 0;
-  background: #f8f9fa;
   position: relative;
 }
 
@@ -1047,204 +1044,68 @@ section {
   color: #666;
 }
 
-/* Newsletter Section */
+
+
+ /* Updated Color Variables */
+ :root {
+  --mint: #B4D8C1;
+  --lavender: #CABBE9;
+}
+
+
 .newsletter-section {
-  background-color: #667eea;
-  color: white;
-  padding: 3rem;
-  border-radius: 8px;
-  text-align: center;
-  margin: 3rem 0;
+  background-color: var(--lavender) !important;
 }
 
-.newsletter-section h3 {
-  color: white;
-  margin-bottom: 1rem;
+.btn-primary:hover {
+  background-color: var(--mint) !important;
+  color: #333 !important;
 }
 
-.newsletter-section p {
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2rem;
+.contact-section::before,
+.content-section::before {
+  background-image: none !important;
 }
 
-.newsletter-form {
-  display: flex;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
+body.index {
+  background-color: #4f6d8f; /* Danube */
 }
 
-.newsletter-form input {
-  flex: 1;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+body.coaching {
+  background-color: #3c8b3f; /* Envy */
 }
 
-.newsletter-form button {
-  padding: 12px 30px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+body.feedback {
+  background-color: #f6ce4b; /* Lemon Twist */
 }
 
-.newsletter-form button:hover {
-  background-color: #222;
+body.meet-ellen {
+  background-color: #f4cfd2; /* Rose Pink */
 }
 
-/* Blog Styles */
-.blog-section {
-  padding: 60px 0;
+body.contact {
+  background-color: #45a3b7; /* Aquarium */
 }
 
-.blog-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 3rem;
+body.costs {
+  background-color: #b03a3e; /* Rejuvenate */
 }
 
-.blog-posts {
-  min-width: 0;
+body.index .page-hero,
+body.coaching .page-hero,
+body.contact .page-hero,
+body.costs .page-hero,
+body.feedback .page-hero,
+body.meet-ellen .page-hero {
+  background: none;
+  background-color: inherit;
 }
-
-.blog-post {
-  background-color: #fff;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.blog-post h2 {
-  margin-bottom: 0.5rem;
-}
-
-.blog-post h2 a {
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.blog-post h2 a:hover {
-  color: #667eea;
-}
-
-.post-meta {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: 14px;
-  color: #666;
-}
-
-.post-category {
-  color: #667eea;
-  font-weight: 600;
-}
-
-.read-more {
-  font-weight: 600;
-  color: #667eea;
-}
-
-/* Blog Sidebar */
-.blog-sidebar {
-  position: sticky;
-  top: 100px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-}
-
-.sidebar-widget {
-  background-color: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.sidebar-widget h3 {
-  color: #333;
-  margin-bottom: 1rem;
-  font-size: 20px;
-}
-
-.category-list,
-.popular-posts {
-  list-style: none;
-  margin: 0;
-}
-
-.category-list li,
-.popular-posts li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.category-list li:last-child,
-.popular-posts li:last-child {
-  border-bottom: none;
-}
-
-.category-list a,
-.popular-posts a {
-  color: #666;
-  transition: color 0.3s ease;
-}
-
-.category-list a:hover,
-.popular-posts a:hover {
-  color: #667eea;
-}
-
-.subscribe-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.subscribe-form input {
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.guide-promo {
-  text-align: center;
-}
-
-.guide-promo h4 {
-  color: #667eea;
-  margin-bottom: 0.5rem;
-}
-
-.guide-promo p {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 1rem;
-}
-
-/* Blog Pagination */
-.blog-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.pagination-prev,
-.pagination-next {
-  font-weight: 600;
-  color: #667eea;
-}
-
-.pagination-current {
-  color: #666;
+body.feedback .page-hero h1,
+body.feedback .page-hero .lead,
+body.meet-ellen .page-hero h1,
+body.meet-ellen .page-hero .lead {
+  color: #333 !important;
+  text-shadow: none !important;
 }
 
 /* Responsive Design */
@@ -1284,6 +1145,7 @@ section {
   .about-image img {
       height: 300px;
   }
+ 
 }
 
 @media (max-width: 768px) {
@@ -1412,68 +1274,4 @@ section {
       padding: 2rem 1.5rem;
   }
 
-/* Updated Color Variables */
-:root {
-  --mint: #B4D8C1;
-  --lavender: #CABBE9;
-}
-
-/* Override gradients and background colors */
-.hero-section,
-.page-hero,
-.cta-section,
-.testimonials-section {
-  background: linear-gradient(135deg, var(--mint), var(--lavender)) !important;
-}
-
-.newsletter-section {
-  background-color: var(--lavender) !important;
-}
-
-.btn-primary:hover {
-  background-color: var(--mint) !important;
-  color: #333 !important;
-}
-
-.contact-section::before,
-.content-section::before {
-  background-image: none !important;
-}
-
-/* Optional overrides for darker themes */
-.site-header {
-  background-color: var(--mint) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.site-footer {
-  background-color: var(--lavender) !important;
-  color: #333 !important;
-}
-body.home {
-  background-color: #f0f7f7; /* SW 9051 Aquaverde */
-}
-
-body.coaching {
-  background-color: #fff9f3; /* SW 7102 White Duck */
-}
-
-body.adhd-add {
-  background-color: #f8f4fc; /* SW 6557 Central Mauve */
-}
-
-body.organization {
-  background-color: #f6f3f0; /* SW 7002 Downy */
-}
-
-body.meet-ellen {
-  background-color: #f4f7f2; /* SW 6171 Chatroom */
-}
-
-body.costs {
-  background-color: #fef6f6; /* SW 7110 Cosmetic Blush */
-}
-
-body.contact {
-  background-color: #f4f4f4; /* Light neutral gray */
 }
