@@ -404,15 +404,38 @@ section {
   color: #666;
 }
 
+
 /* Testimonials Section */
 .testimonials-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
   color: #fff;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-color: #4f6d8f; /* Same as body.index background */
+  background-size: cover;
+  z-index: 0;
+}
+
+/* Ensure content is above the background */
+.testimonials-section > *,
+.testimonials-grid > * {
+  position: relative;
+  z-index: 1;
 }
 
 .testimonials-section .section-title {
   color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .testimonials-grid {
@@ -705,10 +728,13 @@ section {
 
 .about-image img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: auto; /* Let image keep original height */
+  object-fit: contain; /* Optional: keeps image fully visible */
+  max-width: 300px;
+  display: block;
+  margin: 40px auto; /* centers and pushes down from nav */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-text h2 {
@@ -760,8 +786,8 @@ section {
 }
 
 /* CTA Section */
-.cta-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+body.coaching .cta-section {
+  background: linear-gradient(135deg, #2d662d, #3c8b3f);
   padding: 3rem;
   border-radius: 12px;
   text-align: center;
@@ -1046,6 +1072,47 @@ section {
 
 
 
+
+/* Limit green background to only the hero section */
+body.coaching {
+  background-color: #fff; /* Default page background */
+}
+
+body.coaching .page-hero {
+  background-color: #3c8b3f; /* Envy green */
+  color: #fff;
+}
+
+body.coaching .page-hero::before {
+  background-color: #3c8b3f !important;
+}
+
+/* Ensure white background behind main content */
+body.coaching .content-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+/* Optional: Style each subsection within content for better readability */
+body.coaching .content-section > section {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Fix the CTA (Option: Match green palette or keep white) */
+body.coaching .cta-section {
+  background: linear-gradient(135deg, #2d662d 0%, #3c8b3f 100%);
+  color: #fff;
+}
+
+body.coaching .cta-section h2,
+body.coaching .cta-section p {
+  color: #fff;
+  text-shadow: none;
+}
+
+
  /* Updated Color Variables */
  :root {
   --mint: #B4D8C1;
@@ -1071,39 +1138,72 @@ body.index {
   background-color: #4f6d8f; /* Danube */
 }
 
-body.coaching {
-  background-color: #3c8b3f; /* Envy */
+body.meet-ellen {
+  background-color: #fff; /* Keep the base white */
 }
+
+body.meet-ellen .cta-section {
+  background-color: #f4cfd2;
+  color: #333;
+}
+
 
 body.feedback {
   background-color: #f6ce4b; /* Lemon Twist */
-}
-
-body.meet-ellen {
-  background-color: #f4cfd2; /* Rose Pink */
 }
 
 body.contact {
   background-color: #45a3b7; /* Aquarium */
 }
 
-body.costs {
-  background-color: #b03a3e; /* Rejuvenate */
+body.contact .page-hero {
+  background-color: #45a3b7 !important;
+  background-image: none !important;
+  color: #fff;
 }
 
-body.index .page-hero,
-body.coaching .page-hero,
-body.contact .page-hero,
-body.costs .page-hero,
-body.feedback .page-hero,
-body.meet-ellen .page-hero {
-  background: none;
-  background-color: inherit;
+
+body.contact .page-hero h1,
+body.contact .page-hero .lead {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+
+
+/* Reset full-page red and match other pages' section layout */
+body.costs {
+  background-color: #fff; /* Set overall background to white */
+}
+
+body.costs .page-hero {
+  background-color: #b03a3e; /* Rejuvenate red */
+  color: #fff;
+}
+
+body.costs .page-hero::before {
+  background-color: #b03a3e !important;
+}
+
+body.costs .content-section {
+  background-color: #fff;
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+}
+
+body.costs .content-section > * {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+
+
+
+
 body.feedback .page-hero h1,
-body.feedback .page-hero .lead,
-body.meet-ellen .page-hero h1,
-body.meet-ellen .page-hero .lead {
+body.feedback .page-hero .lead {
   color: #333 !important;
   text-shadow: none !important;
 }
