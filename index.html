@@ -84,26 +84,35 @@
   <section id="services" class="services-section">
     <div class="container">
       <h2 class="section-title">Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>ADHD & Executive Function Coaching</h3>
-          <p>Work on time management, prioritization, planning, task initiation, and more — tailored to your brain.</p>
+  
+      <div class="services-carousel">
+        <div class="services-grid" id="servicesTrack">
+          <article class="service-card">
+            <h3>ADHD & Executive Function Coaching</h3>
+            <p>Work on time management, prioritization, planning, task initiation, and more — tailored to your brain.</p>
+          </article>
+          <article class="service-card">
+            <h3>Productivity Coaching</h3>
+            <p>Build efficient routines and accountability systems to get more done with less overwhelm.</p>
+          </article>
+          <article class="service-card">
+            <h3>Student Success Coaching</h3>
+            <p>Support for academic achievement with tools for focus, time management, and confidence building.</p>
+          </article>
+          <article class="service-card">
+            <h3>Career Coaching</h3>
+            <p>Get support navigating career transitions, job search, resumes, interviews, and professional growth.</p>
+          </article>
+          <article class="service-card">
+            <h3>The Coaching Process</h3>
+            <p>Learn what coaching is (and isn't), and how Ellen’s structured, supportive process works.</p>
+          </article>
         </div>
-        <div class="service-card">
-          <h3>Productivity Coaching</h3>
-          <p>Build efficient routines and accountability systems to get more done with less overwhelm.</p>
-        </div>
-        <div class="service-card">
-          <h3>Student Success Coaching</h3>
-          <p>Support for academic achievement with tools for focus, time management, and confidence building.</p>
-        </div>
-        <div class="service-card">
-          <h3>Career Coaching</h3>
-          <p>Get support navigating career transitions, job search, resumes, interviews, and professional growth.</p>
-        </div>
-        <div class="service-card">
-          <h3>The Coaching Process</h3>
-          <p>Learn what coaching is (and isn't), and how Ellen’s structured, supportive process works.</p>
+  
+        <div class="services-controls" aria-hidden="false" aria-label="Services carousel controls">
+          <button type="button" class="svc-btn svc-prev" aria-label="Previous services">‹</button>
+          <div class="svc-dots" id="servicesDots" aria-hidden="true"></div>
+          <button type="button" class="svc-btn svc-next" aria-label="Next services">›</button>
         </div>
       </div>
     </div>
