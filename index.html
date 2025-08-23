@@ -45,23 +45,57 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
+  <!-- Welcome / Hero -->
+  <section class="hero-section" role="region" aria-labelledby="welcomeTitle">
     <div class="container">
-      <div class="hero-wrapper">
+      <!-- NEW: 3-column grid -->
+      <div class="hero-grid">
+        <!-- COL 1: Blurb + CTA -->
         <div class="hero-content">
-          <h1>Welcome to Ellen Berkman Coaching</h1>
+          <h1 id="welcomeTitle">Welcome to Ellen Berkman Coaching</h1>
           <h2>Early Career & Career Transition Coach</h2>
           <p class="hero-description">
-            Empowering you in their career, academic and personal lives to harness their strengths, overcome challenges, and create individualized habits and systems that support your success.
+            Empowering you in your career, academic and personal life to harness your strengths,
+            overcome challenges, and create individualized habits and systems that support your success.
           </p>
           <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Get Started – free 30 minute meeting</a>
+            <a href="contact.html" class="btn btn-primary">Schedule A Free 30 Minute Consultation</a>
           </div>
         </div>
+
+        <!-- COL 2: Photo -->
         <div class="hero-image">
-          <img src="/ellen-headshot.png" alt="Ellen Berkman" />
+          <img src="ellen-headshot.png" alt="Portrait of Ellen Berkman" />
         </div>
+
+        <!-- COL 3: Credentials (stacked) -->
+        <aside class="hero-creds" aria-label="Professional credentials">
+          <h3 class="sr-only">Credentials</h3>
+          <ul class="creds-stack">
+            <!-- Replace src/alt with your real assets/titles -->
+            <li class="cred-item">
+              <img src="cred1.png" alt="ICF Member" loading="lazy">
+              <div class="cred-text">
+                <span class="cred-title">ICF Member</span>
+                <span class="cred-sub">International Coaching Federation</span>
+              </div>
+            </li>
+            <li class="cred-item">
+              <img src="cred2.png" alt="Associate Certified Coach (ACC)" loading="lazy">
+              <div class="cred-text">
+                <span class="cred-title">ACC</span>
+                <span class="cred-sub">Associate Certified Coach</span>
+              </div>
+            </li>
+            <li class="cred-item">
+              <img src="cred3.png" alt="Center for Executive Coaching Certified" loading="lazy">
+              <div class="cred-text">
+                <span class="cred-title">CEC Certified</span>
+                <span class="cred-sub">Center for Executive Coaching</span>
+              </div>
+            </li>
+          </ul>
+        </aside>
       </div>
     </div>
   </section>
@@ -84,7 +118,7 @@
   <section id="services" class="services-section">
     <div class="container">
       <h2 class="section-title">Services</h2>
-  
+
       <div class="services-carousel">
         <div class="services-grid" id="servicesTrack">
           <article class="service-card">
@@ -95,7 +129,7 @@
             <h3>Productivity Coaching</h3>
             <p>Build efficient routines and accountability systems to get more done with less overwhelm.</p>
           </article>
-          <article class="service-card">
+        <article class="service-card">
             <h3>Student Success Coaching</h3>
             <p>Support for academic achievement with tools for focus, time management, and confidence building.</p>
           </article>
@@ -108,7 +142,7 @@
             <p>Learn what coaching is (and isn't), and how Ellen’s structured, supportive process works.</p>
           </article>
         </div>
-  
+
         <div class="services-controls" aria-hidden="false" aria-label="Services carousel controls">
           <button type="button" class="svc-btn svc-prev" aria-label="Previous services">‹</button>
           <div class="svc-dots" id="servicesDots" aria-hidden="true"></div>
