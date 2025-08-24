@@ -41,8 +41,12 @@ p {
   margin-bottom: 1rem;
 }
 
-a {
-  color: #667eea;
+
+  a {
+    color: #667eea;   /* Blue (current) */
+    /* color: #764ba2;   Purple (Ellen’s choice) */
+  
+  
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -239,16 +243,7 @@ a:hover {
 .cred-title { display: block; font-weight: 700; font-size: 0.95rem; color: #fff; }
 .cred-sub   { display: block; font-size: 0.82rem; color: #eaeaea; opacity: 0.9; }
 
-/* If a page uses dark text (e.g., light backgrounds), flip colors for readability */
-body.feedback .cred-title,
-body.meet-ellen .cred-title { color: #222; }
-body.feedback .cred-sub,
-body.meet-ellen .cred-sub   { color: #444; }
-body.feedback .cred-item,
-body.meet-ellen .cred-item {
-  background: rgba(0,0,0,0.04);
-  border-color: rgba(0,0,0,0.08);
-}
+
 
 /* Tablet: text|photo on row 1; credentials span full width on row 2 */
 @media (max-width: 1024px) {
@@ -295,7 +290,9 @@ body.index .hero-section p {
 
 .btn-primary {
   background-color: #fff;
-  color: #667eea;
+  color: #667eea;   /* Blue (current) */
+  /* color: #764ba2;   Purple (Ellen’s choice) */
+
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
@@ -813,41 +810,59 @@ body.index .services-controls .svc-dots .dot.active {
   min-height: calc(100vh - 100px);
 }
 
-/* Page Hero */
+/* ===================== Page Hero (scoped per page) ===================== */
 .page-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 100px 0 60px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
+/* keep the pattern overlay globally */
 .page-hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.page-hero h1 {
+/* ---------- Home (blue/purple) ---------- */
+body.index .page-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+body.index .page-hero h1,
+body.index .page-hero .lead {
   color: #fff;
-  margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  position: relative;
-  z-index: 1;
 }
 
-.page-hero .lead {
-  font-size: 20px;
-  color: #f0f0f0;
-  max-width: 600px;
-  margin: 0 auto;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  position: relative;
-  z-index: 1;
+/* ---------- Coaching (Lemon Twist) ---------- */
+body.coaching .page-hero {
+  background-color: #f6da71; /* Lemon Twist you used */
+}
+body.coaching .page-hero h1,
+body.coaching .page-hero .lead {
+  color: #222;              /* dark text on yellow */
+  text-shadow: none;
+}
+
+/* ---------- Meet Ellen (Rose Pink) ---------- */
+body.meet-ellen .page-hero {
+  background-color: #f4cfd2; /* Rose Pink */
+}
+body.meet-ellen .page-hero h1,
+body.meet-ellen .page-hero .lead {
+  color: #222;               /* dark text on pink */
+  text-shadow: none;
+}
+/* ---------- Costs (Papaya) ---------- */
+body.costs .page-hero {
+  background-color: #e7bb84; /* Papaya */
+}
+body.costs .page-hero h1,
+body.costs .page-hero .lead {
+  color: #222;              /* dark text for contrast */
+  text-shadow: none;
 }
 
 /* Content Section */
@@ -982,6 +997,12 @@ body.coaching .cta-section {
   margin-bottom: 2rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+/* Coaching hero text on Lemon Twist */
+body.coaching .page-hero h1,
+body.coaching .page-hero .lead {
+  color: #222 !important;     /* dark text for contrast on yellow */
+  text-shadow: none !important;
+}
 
 /* Challenges Grid */
 .challenges-grid {
@@ -1099,77 +1120,7 @@ body.coaching .cta-section {
   color: #666;
 }
 
-/* Resources Page Styles */
-.resources-section {
-  margin-bottom: 3rem;
-}
 
-.resources-section h3 {
-  color: #333;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e0e0e0;
-}
-
-.resource-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.resource-card {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  border: 1px solid rgba(102,126,234,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.resource-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(102,126,234,0.15);
-}
-
-.resource-card h4 {
-  color: #667eea;
-  margin-bottom: 1rem;
-}
-
-.resource-card p {
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-.resource-list {
-  list-style: none;
-  margin: 0;
-}
-
-.resource-list li {
-  background-color: #fff;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  border-left: 4px solid #667eea;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.resource-list h4 {
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.resource-list p {
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.resource-list a {
-  font-weight: 600;
-}
 
 /* Book Grid */
 .book-grid {
@@ -1232,18 +1183,14 @@ body.coaching .cta-section {
 
 
 
-/* Limit green background to only the hero section */
+
 body.coaching {
   background-color: #fff; /* Default page background */
 }
 
 body.coaching .page-hero {
-  background-color: #3c8b3f; /* Envy green */
-  color: #fff;
-}
-
-body.coaching .page-hero::before {
-  background-color: #3c8b3f !important;
+  background-color: #f6da71; 
+  color: black;
 }
 
 /* Ensure white background behind main content */
@@ -1259,10 +1206,10 @@ body.coaching .content-section > section {
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* Fix the CTA (Option: Match green palette or keep white) */
+
 body.coaching .cta-section {
   background: linear-gradient(135deg, #2d662d 0%, #3c8b3f 100%);
-  color: #fff;
+  color: black
 }
 
 body.coaching .cta-section h2,
@@ -1271,17 +1218,6 @@ body.coaching .cta-section p {
   text-shadow: none;
 }
 
-
- /* Updated Color Variables */
- :root {
-  --mint: #B4D8C1;
-  --lavender: #CABBE9;
-}
-
-
-.newsletter-section {
-  background-color: var(--lavender) !important;
-}
 
 .btn-primary:hover {
   background-color: var(--mint) !important;
@@ -1342,18 +1278,6 @@ body.costs {
 body.costs .site-main { flex: 1 0 auto; }
 body.costs .site-footer { flex-shrink: 0; }
 
-/* Hero (no subtitle) */
-body.costs .page-hero {
-  background-color: #b03a3e; /* Rejuvenate red (keep your color) */
-  color: #fff;
-  padding: 100px 0 60px;
-  position: relative;
-  text-align: center;
-}
-body.costs .page-hero::before {
-  background-color: #b03a3e !important; /* preserve your solid look */
-}
-body.costs .page-hero .lead { display: none; } /* ensure “COSTS tab” stays hidden */
 
 /* Content container width & spacing */
 body.costs .content-section {
@@ -1579,23 +1503,6 @@ body.feedback .page-hero .lead {
       align-items: center;
   }
   
-
-  
-  
-
-
-  .blog-wrapper {
-      grid-template-columns: 1fr;
-  }
-  
-  .blog-sidebar {
-      position: static;
-      margin-top: 3rem;
-  }
-  
-  .newsletter-form {
-      flex-direction: column;
-  }
   
   .approach-grid,
   .challenges-grid,
