@@ -194,7 +194,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1.2fr 1fr 0.9fr; /* text | photo | creds */
   gap: 2rem;
-  align-items: center;
+  align-items: start;
 }
 
 /* Column 1: text */
@@ -213,14 +213,29 @@ a:hover {
 }
 
 /* Column 3: stacked credentials */
-.hero-creds { align-self: start; } /* pin to top so it starts with the headline */
+/* Column 3: stacked credentials */
+.hero-creds {
+  align-self: start;     /* pin column to top so it aligns with the headline */
+  text-align: center;    /* center the heading + list inside */
+}
+
+.hero-creds h3 {
+  margin-bottom: 1rem;   /* space under "Credentials" */
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;           /* white text to match the blue hero background */
+  text-align: center;    /* make sure heading itself is centered */
+}
+
 .creds-stack {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   gap: 0.9rem;
+  justify-items: center; /* centers each credential card horizontally */
 }
+
 .cred-item {
   display: grid;
   grid-template-columns: 44px 1fr; /* icon | text */
@@ -231,7 +246,10 @@ a:hover {
   border-radius: 12px;
   padding: 0.6rem 0.75rem;
   backdrop-filter: blur(2px);
+  width: 100%;           /* ensures full width inside column */
+  max-width: 280px;      /* keeps cards from stretching too wide */
 }
+
 .cred-item img {
   width: 44px;
   height: 44px;
@@ -239,10 +257,22 @@ a:hover {
   border-radius: 50%;
   background: rgba(255,255,255,0.85); /* keeps logos crisp on colored hero */
 }
-.cred-text { line-height: 1.2; }
-.cred-title { display: block; font-weight: 700; font-size: 0.95rem; color: #fff; }
-.cred-sub   { display: block; font-size: 0.82rem; color: #eaeaea; opacity: 0.9; }
 
+.cred-text { line-height: 1.2; }
+
+.cred-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.cred-sub {
+  display: block;
+  font-size: 0.82rem;
+  color: #eaeaea;
+  opacity: 0.9;
+}
 
 
 /* Tablet: text|photo on row 1; credentials span full width on row 2 */
