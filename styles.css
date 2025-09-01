@@ -701,6 +701,10 @@ body.index .services-controls .svc-dots .dot.active {
   text-align: center;
   margin-bottom: 2rem;
 }
+.contact-intro p {
+  font-size: 20px;    /* bigger than default */
+  line-height: 1.6;
+}
 
 .contact-form {
   background: #fff;
@@ -716,6 +720,18 @@ body.index .services-controls .svc-dots .dot.active {
   grid-column: 1 / -1;
   justify-self: center;
   margin-top: 1rem;
+}
+.contact-form .btn.btn-primary {
+  background-color: #2ec9c8;   /* turquoise */
+  color: #083133;              /* readable text */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contact-form .btn.btn-primary:hover {
+  background-color: #27b3b2;   /* slightly darker turquoise */
+  color: #062628;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.28);
 }
 
 .form-group {
@@ -848,14 +864,6 @@ body.index .services-controls .svc-dots .dot.active {
   overflow: hidden;
 }
 
-/* keep the pattern overlay globally */
-.page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
 /* ---------- Home (blue/purple) ---------- */
 body.index .page-hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -875,19 +883,103 @@ body.coaching .page-hero .lead {
   color: #222;              /* dark text on yellow */
   text-shadow: none;
 }
+/* ===================== COACHING PAGE UPDATES ===================== */
 
-/* ---------- Meet Ellen (Rose Pink) ---------- */
+/* 1) Bigger hero subhead on Coaching (as big as section h2) */
+body.coaching .page-hero .lead,
+body.coaching .page-hero .lead-lg {
+  font-size: 32px;   /* matches your h2 size */
+  line-height: 1.35;
+  font-weight: 600;
+}
+@media (max-width: 768px){
+  body.coaching .page-hero .lead,
+  body.coaching .page-hero .lead-lg {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+}
+
+/* 2) Yellow band for each section header on Coaching (only top-level, not CTA) */
+body.coaching .content-wrapper > h2,
+body.coaching .content-wrapper > h3,
+body.coaching .content-wrapper .heading-yellow {
+  display: block;
+  background-color: #f6da71;   /* Lemon Twist */
+  color: #222;
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  margin: 1.25rem 0 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* If you don’t want ALL h3s banded, comment the selector above and
+   add class="heading-yellow" only to the ones you want. */
+
+/* 3) Smooth in-page anchor offset (fixed header) */
+body.coaching .content-wrapper h2[id],
+body.coaching .content-wrapper h3[id] {
+  scroll-margin-top: 90px;  /* keeps the title visible after jump */
+}
+
+/* 4) Optional: tighten lists directly under banded headings */
+body.coaching .content-wrapper h2 + ul,
+body.coaching .content-wrapper h3 + ul {
+  margin-top: 0.5rem;
+}
+
+/* 5) Optional: subtle divider between major sections for rhythm */
+body.coaching .content-wrapper > h2 {
+  margin-top: 2rem; /* space before each major section */
+}
+
+/* ---------- Meet Ellen  ---------- */
 body.meet-ellen .page-hero {
-  background-color: #f4cfd2; /* Rose Pink */
+  background-color: #357836; /* Green */
 }
 body.meet-ellen .page-hero h1,
 body.meet-ellen .page-hero .lead {
-  color: #222;               /* dark text on pink */
-  text-shadow: none;
+  color: #fff;               /* white on green */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
 }
-/* ---------- Costs (Papaya) ---------- */
+/* Meet Ellen: larger subtitle to match Coaching */
+body.meet-ellen .lead-lg {
+  font-size: 24px;
+  line-height: 1.55;
+  font-weight: 600;
+}
+@media (max-width: 768px){
+  body.meet-ellen .lead-lg { font-size: 22px; }
+}
+/* Meet Ellen: green header bars */
+body.meet-ellen .heading-green {
+  display: block;                 /* full-width bar feel */
+  background-color: #357836;      /* green */
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin: 1.25rem 0 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+/* Meet Ellen: green CTA button */
+body.meet-ellen .btn-green {
+  background-color: #357836;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+}
+body.meet-ellen .btn-green:hover {
+  background-color: #2d662d;   /* tasteful darken */
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+}
+
+
+
+/* ---------- Costs (Serene Blue) ---------- */
 body.costs .page-hero {
-  background-color: #e7bb84; /* Papaya */
+  background-color: #a4c3e9; /* Serene Blue */
 }
 body.costs .page-hero h1,
 body.costs .page-hero .lead {
@@ -1239,7 +1331,7 @@ body.coaching .content-section > section {
 
 body.coaching .cta-section {
   background: linear-gradient(135deg, #2d662d 0%, #3c8b3f 100%);
-  color: black
+  color: black;
 }
 
 body.coaching .cta-section h2,
@@ -1293,6 +1385,11 @@ body.contact .page-hero .lead {
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+body.contact .page-hero .lead {
+  font-size: 22px;    /* larger than default paragraph */
+  line-height: 1.55;
+  font-weight: 500;
+}
 
 
 
@@ -1345,7 +1442,21 @@ body.costs .pricing-card h3 { margin: 0; font-size: 1.25rem; }
 body.costs .pricing-card .price { font-size: 2rem; font-weight: 700; line-height: 1; }
 body.costs .pricing-card .pricing-note { margin: .5rem 0 1rem; opacity: .85; }
 body.costs .pricing-card .btn { display: inline-block; }
-
+/* Costs: colorize pricing-card buttons */
+body.costs .pricing-card .btn,
+body.costs .pricing-card .btn.btn-primary {
+  background-color: #a4c3e9;   /* serene blue */
+  color: #0f2540;              /* readable text */
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+body.costs .pricing-card .btn:hover,
+body.costs .pricing-card .btn.btn-primary:hover {
+  background-color: #8fb3e4;   /* slightly darker on hover */
+  color: #0b1c30;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
 body.costs .pricing-card.featured {
   box-shadow: 0 10px 28px rgba(0,0,0,0.1);
   transform: translateY(-2px);
@@ -1397,14 +1508,31 @@ body.costs .how-it-works .step {
 body.costs .step .step-num {
   width: 40px; height: 40px; margin: 0 auto .5rem;
   border-radius: 999px; display: grid; place-items: center;
-  border: 1px solid rgba(0,0,0,0.1);
-  font-weight: 700; background: #fff;
+  font-weight: 700;
+  background: #a4c3e9;        /* colored circle */
+  color: #0f2540;             /* readable number */
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 body.costs .how-it-works h4 { margin: 0 0 .25rem; font-size: 1rem; }
 
 /* CTA sizing (uses your existing button colors) */
 body.costs .btn-lg { padding: .9rem 1.25rem; font-size: 1.05rem; border-radius: 999px; }
-
+/* Costs: colorize CTA button */
+body.costs .btn-lg,
+body.costs .btn.btn-primary.btn-lg {
+  background-color: #a4c3e9;
+  color: #0f2540;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+body.costs .btn-lg:hover,
+body.costs .btn.btn-primary.btn-lg:hover {
+  background-color: #8fb3e4;
+  color: #0b1c30;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
 
 
 body.feedback .page-hero h1,
