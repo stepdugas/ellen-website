@@ -169,13 +169,9 @@ a:hover {
   position: relative;
   overflow: hidden;
 }
+/* remove pattern overlay from Home hero */
 .hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' ... %3C/svg%3E");
-  pointer-events: none;  /* 👈 so it won’t block clicks */
-  z-index: 0;            /* 👈 push it behind your content */
+  content: none; /* disables the pseudo-element entirely */
 }
 
 /* Default hero layout (2 cols: content + image) */
@@ -826,7 +822,10 @@ body.index .services-section .services-grid {
 
 /* ---------- Home (blue/purple) ---------- */
 body.index .page-hero {
-  background: #6a3f98;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+body.index .hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 body.index .page-hero h1,
 body.index .page-hero .lead {
@@ -842,6 +841,21 @@ body.coaching .page-hero h1,
 body.coaching .page-hero .lead {
   color: #222;              /* dark text on yellow */
   text-shadow: none;
+}
+/* Coaching CTA button color (green, not purple) */
+body.coaching .cta-section .btn,
+body.coaching .cta-section .btn.btn-primary {
+  background-color: #f6da71;
+  color: black;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+}
+body.coaching .cta-section .btn:hover,
+body.coaching .cta-section .btn.btn-primary:hover {
+  background-color: #2d662d;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.22);
 }
 /* ===================== COACHING PAGE UPDATES ===================== */
 
