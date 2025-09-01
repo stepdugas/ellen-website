@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ellen Berkman - Career & Executive Function Coach</title>
-  <meta name="description" content="Ellen Berkman provides executive function and career coaching for adults, students, and professionals." />
+  <meta name="description" content="Ellen Berkman provides executive function, early career, career transition, and business coaching for adults, students, and professionals." />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -12,13 +12,13 @@
 
   <!-- Header Navigation -->
   <header class="site-header">
-    <nav class="main-navigation">
+    <nav class="main-navigation" aria-label="Primary">
       <div class="container">
         <div class="nav-wrapper">
           <div class="logo"><a href="/">Ellen Berkman</a></div>
           <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-  
+            <li><a href="index.html" class="active">Home</a></li>
+
             <li class="has-dropdown">
               <a href="coaching.html">Coaching</a>
               <ul class="dropdown-menu">
@@ -28,7 +28,7 @@
                 <li><a href="coaching.html#process">The Coaching Process</a></li>
               </ul>
             </li>
-  
+
             <li class="has-dropdown">
               <a href="meet-ellen.html">Meet Ellen</a>
               <ul class="dropdown-menu">
@@ -38,11 +38,11 @@
                 <li><a href="meet-ellen.html#contact">Contact</a></li>
               </ul>
             </li>
-  
+
             <li><a href="costs.html">Costs</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
+          <button class="mobile-menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
       </div>
     </nav>
@@ -51,12 +51,11 @@
   <!-- Welcome / Hero -->
   <section class="hero-section" role="region" aria-labelledby="welcomeTitle">
     <div class="container">
-      <!-- NEW: 3-column grid -->
       <div class="hero-grid">
         <!-- COL 1: Blurb + CTA -->
         <div class="hero-content">
           <h1 id="welcomeTitle">Welcome to Ellen Berkman Coaching</h1>
-          <h2>Early Career & Career Transition Coach</h2>
+          <h2>Executive Function, Early Career, Career Transition and Business Coach.</h2>
           <p class="hero-description">
             Empowering you in your career, academic and personal life to harness your strengths,
             overcome challenges, and create individualized habits and systems that support your success.
@@ -75,7 +74,6 @@
         <aside class="hero-creds" aria-label="Professional credentials">
           <h3 class="sr-only">Credentials</h3>
           <ul class="creds-stack">
-            <!-- Replace src/alt with your real assets/titles -->
             <li class="cred-item">
               <img src="cred1.png" alt="ICF Member" loading="lazy">
               <div class="cred-text">
@@ -110,96 +108,105 @@
       <div class="about-content">
         <div class="about-text">
           <p>
-            Ellen Berkman is an Early Career and Career Transition Coach with certifications from the International Coaching Federation (ICF) and the Center for Executive Coaching (CEC). She is dedicated to helping individuals find what works for their unique brain and life circumstances. Her coaching approach blends creativity, empathy, and practical strategy.
+            Ellen graduated from the University of Pennsylvania with a B.A. in Communications and minors in Art and Art History. Ellen has coaching credentials from The International Coaching Federation and the Center for Executive Coaching.
+          </p>
+          <p>
+            Her background most recently has been as an Executive Function Coach and Coordinator, and as a Career Coach at a technology bootcamp, where she has taught a diverse group of learners, aged 18–60, one on one, in a group setting, virtually, and in person. Here, she has worked with many individuals with executive function challenges to help them achieve their goals in a fast-paced learning environment, and to help them find their right match in a rewarding tech position, as they made a career transition.
+          </p>
+          <p>
+            Ellen looks for the unique set of skills and way of learning in each person. She has expertise coaching in time management skills, focus techniques, balancing many responsibilities and task ownership and accountability, and strives to use creativity and positivity when coaching (and really in life!). She is dedicated to helping individuals find what works for their unique brain and life circumstances. Her coaching approach blends creativity, empathy, and practical strategy.
+          </p>
+          <p>
+            In her free time, Ellen hangs out with her family and dogs, loves to see live music, draw, and travel to the beach.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services Section (2 rows × 3 tiles, no carousel) -->
   <section id="services" class="services-section">
     <div class="container">
       <h2 class="section-title">Services</h2>
 
-      <div class="services-carousel">
-        <div class="services-grid" id="servicesTrack">
-          <article class="service-card">
-            <h3>ADHD & Executive Function Coaching</h3>
-            <p>Work on time management, prioritization, planning, task initiation, and more — tailored to your brain.</p>
-          </article>
-          <article class="service-card">
-            <h3>Productivity Coaching</h3>
-            <p>Build efficient routines and accountability systems to get more done with less overwhelm.</p>
-          </article>
+      <div class="services-grid">
         <article class="service-card">
-            <h3>Student Success Coaching</h3>
-            <p>Support for academic achievement with tools for focus, time management, and confidence building.</p>
-          </article>
-          <article class="service-card">
-            <h3>Career Coaching</h3>
-            <p>Get support navigating career transitions, job search, resumes, interviews, and professional growth.</p>
-          </article>
-          <article class="service-card">
-            <h3>The Coaching Process</h3>
-            <p>Learn what coaching is (and isn't), and how Ellen’s structured, supportive process works.</p>
-          </article>
-        </div>
+          <h3>ADHD & Executive Function Coaching</h3>
+          <p>Work on time management, prioritization, planning, task initiation, and more — tailored to your brain.</p>
+        </article>
 
-        <div class="services-controls" aria-hidden="false" aria-label="Services carousel controls">
-          <button type="button" class="svc-btn svc-prev" aria-label="Previous services">‹</button>
-          <div class="svc-dots" id="servicesDots" aria-hidden="true"></div>
-          <button type="button" class="svc-btn svc-next" aria-label="Next services">›</button>
-        </div>
+        <article class="service-card">
+          <h3>Productivity Coaching</h3>
+          <p>Build efficient routines and accountability systems to get more done with less overwhelm.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Student Success Coaching</h3>
+          <p>Support for academic achievement with tools for focus, time management, and confidence building.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Career Coaching</h3>
+          <p>Get support navigating career transitions, job search, resumes, interviews, and professional growth.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Business Coaching</h3>
+          <p>Sharpen your vision, accelerate your growth, and drive transformative results for your organization and yourself.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>The Coaching Process</h3>
+          <p>Learn what coaching is (and isn't), and how Ellen’s structured, supportive process works.</p>
+        </article>
       </div>
     </div>
   </section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials-section">
-  <div class="container">
-    <h2 class="section-title">Feedback on Ellen</h2>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">Feedback on Ellen</h2>
 
-    <div class="testimonials-stack">
-      <!-- 1) Marcel (short) -->
-      <article class="testimonial-row" aria-label="Testimonial from Marcel D.">
-        <div class="t-side">
-          <cite class="t-name">Marcel D.</cite>
-        </div>
-        <blockquote class="t-quote">
-          You've been a massive help to me and it's been a pleasure working with you these past two months.
-        </blockquote>
-      </article>
+      <div class="testimonials-stack">
+        <!-- 1) Jennifer (renamed) -->
+        <article class="testimonial-row" aria-label="Testimonial from Jennifer O.">
+          <div class="t-side">
+            <cite class="t-name">
+              Jennifer O.<br>
+            </cite>
+          </div>
+          <blockquote class="t-quote">
+            I have had the privilege of working closely with Ellen in her role as a Pathway Program Director at Tech Elevator, and I am consistently impressed by her exceptional contributions to our coding bootcamp. With over two decades of experience, Ellen brings a wealth of knowledge and expertise to her role. Her deep understanding of the unique needs and challenges faced by both learners and employers in this competitive field is invaluable.
+            <br><br>
+            She has a genuine passion for understanding what motivates individuals and helping them achieve their aspirations. Having seen Ellen in action, I can attest to her remarkable talent for listening and providing targeted guidance, which leads to the success of our students. Her mission to empower individuals with the necessary skills, confidence, and connections for thriving in the technology industry is both admirable and impactful.
+          </blockquote>
+        </article>
 
-      <!-- 2) Jennifer (long, middle) -->
-      <article class="testimonial-row" aria-label="Testimonial from Jennifer O’Brien">
-        <div class="t-side">
-          <cite class="t-name">
-            Jennifer O’Brien<br>
-            <span class="t-title">Senior Director of Operations, Tech Elevator</span>
-          </cite>
-        </div>
-        <blockquote class="t-quote">
-          I have had the privilege of working closely with Ellen in her role as a Pathway Program Director at Tech Elevator, and I am consistently impressed by her exceptional contributions to our coding bootcamp. With over two decades of experience, Ellen brings a wealth of knowledge and expertise to her role. Her deep understanding of the unique needs and challenges faced by both learners and employers in this competitive field is invaluable.
-          <br><br>
-          She has a genuine passion for understanding what motivates individuals and helping them achieve their aspirations. Having seen Ellen in action, I can attest to her remarkable talent for listening and providing targeted guidance, which leads to the success of our students. Her mission to empower individuals with the necessary skills, confidence, and connections for thriving in the technology industry is both admirable and impactful.
-        </blockquote>
-      </article>
+        <!-- 2) Marcel (moved to middle) -->
+        <article class="testimonial-row" aria-label="Testimonial from Marcel D.">
+          <div class="t-side">
+            <cite class="t-name">Marcel D.</cite>
+          </div>
+          <blockquote class="t-quote">
+            You've been a massive help to me and it's been a pleasure working with you these past two months.
+          </blockquote>
+        </article>
 
-      <!-- 3) Miriel (long) -->
-      <article class="testimonial-row" aria-label="Testimonial from Miriel T.">
-        <div class="t-side">
-          <cite class="t-name">Miriel T.</cite>
-        </div>
-        <blockquote class="t-quote">
-          From our first interaction, I perceived Ellen's professionalism and expertise. …. This kind of dedication to subject matter knowledge set Ellen apart from any other career development support person I had ever encountered.
-          <br><br>
-          As time went on and I had occasion to speak directly with Ellen, I discovered a skill set even more valuable than her obvious combination of career-services-specific skill and knowledge: Ellen is genuinely invested in the success of the students she guides. …… Ellen displayed genuine investment in and understanding of my specific circumstances and needs--as I know she also did for any of my peers who reached out to her directly with questions or unique needs. ……. Ellen truly loves providing expert support to each individual on their specific path to professional success. The formal terms of her job description could not possibly capture the way that Ellen lights up at the opportunity to support, guide, and encourage the students under her direction. She has been indispensable to my success.
-        </blockquote>
-      </article>
+        <!-- 3) Miriel -->
+        <article class="testimonial-row" aria-label="Testimonial from Miriel T.">
+          <div class="t-side">
+            <cite class="t-name">Miriel T.</cite>
+          </div>
+          <blockquote class="t-quote">
+            From our first interaction, I perceived Ellen's professionalism and expertise. …. This kind of dedication to subject matter knowledge set Ellen apart from any other career development support person I had ever encountered.
+            <br><br>
+            As time went on and I had occasion to speak directly with Ellen, I discovered a skill set even more valuable than her obvious combination of career-services-specific skill and knowledge: Ellen is genuinely invested in the success of the students she guides. …… Ellen displayed genuine investment in and understanding of my specific circumstances and needs--as I know she also did for any of my peers who reached out to her directly with questions or unique needs. ……. Ellen truly loves providing expert support to each individual on their specific path to professional success. The formal terms of her job description could not possibly capture the way that Ellen lights up at the opportunity to support, guide, and encourage the students under her direction. She has been indispensable to my success.
+          </blockquote>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
@@ -207,12 +214,22 @@
       <h2 class="section-title">Get In Touch</h2>
       <div class="contact-content">
         <p>I would love to help you reduce your stress and anxiety, and learn practical ways to create habits and methods to GET THINGS DONE!</p>
-        <p>My specialty is working with individuals with ADHD/ADD to find what works for YOU and your brain.</p>
+
+        <!-- Updated specialties language -->
+        <p>My specialties are:</p>
+        <ul aria-label="Ellen's specialties">
+          <p>ADHD and executive function coaching</p>
+          <p>Early and transitioning career coaching</p>
+          <p>Business coaching</p>
+        </ul>
+
         <div class="contact-info">
           <p>Email: <a href="mailto:ellen@adhdcoaching-careercoaching.com">ellen@adhdcoaching-careercoaching.com</a></p>
           <p>Phone: <a href="tel:4122546445">412.254.6445</a></p>
         </div>
-        <a href="contact.html" class="btn btn-primary">Schedule a free consultation</a>
+
+        <!-- Button stays .btn .btn-primary; we’ll handle purple/white in CSS next -->
+        <a href="contact.html" class="btn btn-primary">Schedule a Free Consultation</a>
       </div>
     </div>
   </section>

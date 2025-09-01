@@ -43,8 +43,7 @@ p {
 
 
   a {
-    color: #667eea;   /* Blue (current) */
-    /* color: #764ba2;   Purple (Ellen’s choice) */
+    color: #6a3f98;  
   
   
   text-decoration: none;
@@ -52,7 +51,7 @@ p {
 }
 
 a:hover {
-  color: #764ba2;
+  color: #6a3f98;
 }
 
 /* Header Navigation */
@@ -94,7 +93,7 @@ a:hover {
 }
 
 .nav-menu a:hover {
-  color: #667eea;
+  color: #6a3f98;
 }
 
 /* Dropdown Menu Styles */
@@ -319,16 +318,15 @@ body.index .hero-section p {
 }
 
 .btn-primary {
-  background-color: #fff;
-  color: #667eea;   /* Blue (current) */
-  /* color: #764ba2;   Purple (Ellen’s choice) */
-
+  background-color: #6a3f98; /* purple */
+  color: #fff;               /* white text */
+  border: none;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .btn-primary:hover {
-  background-color: #f8f9fa;
-  color: #764ba2;
+  background-color: #5a347f; /* slightly darker purple */
+  color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
@@ -393,62 +391,24 @@ section {
   background: linear-gradient(180deg, #fff 0%, #f8f9fa 100%);
   position: relative;
 }
-/* ==================== HOME / SERVICES CAROUSEL ONLY ==================== */
-body.index .services-carousel { position: relative; }
-
-/* Turn the grid into a horizontal, snap-scrolling track */
+/* ==================== HOME / SERVICES GRID (2 rows × 3) ==================== */
 body.index .services-section .services-grid {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: .25rem .5rem 1rem;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;            /* Firefox */
-}
-body.index .services-section .services-grid::-webkit-scrollbar { display: none; }
-
-/* Card sizing – 1 card on small screens, ~2–3 on wider */
-body.index .services-section .service-card {
-  flex: 0 0 clamp(280px, 32vw, 360px);
-  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-/* Controls */
-body.index .services-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .75rem;
-  margin-top: .75rem;
-}
-body.index .services-controls .svc-btn {
-  border: 1px solid rgba(0,0,0,0.15);
-  background: #fff;
-  padding: .5rem .75rem;
-  border-radius: 999px;
-  cursor: pointer;
-  line-height: 1;
-  font-size: 1rem;
-}
-body.index .services-controls .svc-btn:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+@media (max-width: 900px) {
+  body.index .services-section .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* Dots */
-body.index .services-controls .svc-dots {
-  display: flex; gap: .4rem; align-items: center;
+@media (max-width: 600px) {
+  body.index .services-section .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
-body.index .services-controls .svc-dots .dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: rgba(0,0,0,0.2);
-  transition: transform .2s ease, background .2s ease;
-}
-body.index .services-controls .svc-dots .dot.active {
-  background: rgba(0,0,0,0.6);
-  transform: scale(1.25);
-}
-
 /* Optional edge padding on very wide screens */
 @media (min-width: 1200px){
   body.index .services-section .services-grid {
@@ -554,7 +514,7 @@ body.index .services-controls .svc-dots .dot.active {
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-color: #4f6d8f;
+  background-color: #6a3f98;
   background-size: cover;
   z-index: 0;
 }
@@ -866,7 +826,7 @@ body.index .services-controls .svc-dots .dot.active {
 
 /* ---------- Home (blue/purple) ---------- */
 body.index .page-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #6a3f98;
 }
 body.index .page-hero h1,
 body.index .page-hero .lead {
@@ -1000,7 +960,7 @@ body.costs .page-hero .lead {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23667eea' fill-opacity='0.02'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236a3f98' fill-opacity='0.02'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 40px 40px;
   pointer-events: none; /* ✅ lets clicks through */
   z-index: 0;
@@ -1067,7 +1027,7 @@ body.costs .page-hero .lead {
 
 /* Active Navigation State */
 .nav-menu a.active {
-  color: #667eea;
+  color: #6a3f98;
   font-weight: 600;
 }
 
@@ -1352,7 +1312,7 @@ body.coaching .cta-section p {
 }
 
 body.index {
-  background-color: #4f6d8f; /* Danube */
+  background-color: #6a3f98; 
 }
 
 body.meet-ellen {
