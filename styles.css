@@ -669,6 +669,35 @@
   .contact-info-sidebar{ margin-top:2rem; }
   .content-wrapper{ padding: 0 1rem; }
 }
+/* ===== Mobile dropdown caret & layering ===== */
+.site-header { z-index: 1000; }
+.mobile-menu-toggle { z-index: 1100; position: relative; }
+.nav-menu { z-index: 1200; }
+
+@media (max-width: 768px){
+  .nav-wrapper { position: relative; }              
+  .has-dropdown { position: relative; }
+  .has-dropdown > a { padding-right: 38px; }        
+  .has-dropdown > a::after { content: none; }       
+
+  .submenu-toggle{
+    position: absolute;
+    top: 0; right: 8px;
+    height: 44px; width: 30px;
+    border: 0; background: transparent; cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .submenu-toggle::after{
+    content: '▾';
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform .2s ease;
+    font-size: 14px; line-height: 44px;
+  }
+  .submenu-toggle[aria-expanded="true"]::after{
+    transform: rotate(180deg);
+  }
+}
 
 /* (Optional) Desktop reinforce (≥1025px) – keeps your 3-col hero explicit */
 @media (min-width: 1025px){
