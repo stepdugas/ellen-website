@@ -586,46 +586,98 @@
    .site-footer p{ margin:0; }
    
    /* =========================
-      Responsive
-      ========================= */
-   @media (max-width: 1024px){
-     .hero-grid{
-       grid-template-columns: 1fr .9fr;
-       grid-template-areas:
-         "content image"
-         "creds   creds";
-       gap: 1.5rem;
-     }
-     .hero-content { grid-area: content; }
-     .hero-image   { grid-area: image; }
-     .hero-creds   { grid-area: creds; }
-   }
-   
-   @media (max-width: 968px){
-     .hero-grid{ grid-template-columns:1fr; gap:1.25rem; }
-   }
-   
-   @media (max-width: 768px){
-     .mobile-menu-toggle{ display:flex; }
-   
-     .nav-menu{
-       display:none; position:absolute; top:100%; left:0; right:0;
-       background:#fff; flex-direction:column; padding:1rem; box-shadow:0 5px 10px rgba(0,0,0,0.1);
-     }
-     .nav-menu.active{ display:flex; }
-     .dropdown-menu{
-       position: static; opacity:1; visibility:visible; transform:none; box-shadow:none;
-       background:#f8f9fa; display:none; margin-left:1rem;
-     }
-     .dropdown-menu.show{ display:block; }
-     .has-dropdown > a::after{ float:right; }
-   
-     .hero-section{ padding: calc(var(--header-h) + 24px) 0 60px; }
-   
-     .contact-form-wrapper{ grid-template-columns:1fr; }
-     .contact-form{ grid-template-columns:1fr; }
-     .contact-info-sidebar{ margin-top:2rem; }
-     .content-wrapper{ padding: 0 1rem; }
+   Responsive
+   ========================= */
 
+/* ===== Tablet (≤1024px): 2-col with creds below image ===== */
+@media (max-width: 1024px){
+  .hero-grid{
+    grid-template-columns: 1fr .9fr;
+    grid-template-areas:
+      "content image"
+      "creds   creds";
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .hero-content { grid-area: content; }
+  .hero-image   { grid-area: image; }
+  .hero-creds   { grid-area: creds; }
+  .hero-buttons { justify-content: flex-start; }
+}
 
-   }
+/* ===== Phones / Small tablets (≤968px): clean stacked order ===== */
+@media (max-width: 968px){
+  .hero-grid{
+    display: grid;
+    grid-template-areas:
+      "content"
+      "image"
+      "creds";
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* Map to areas + centering */
+  .hero-content { grid-area: content; }
+  .hero-image   { grid-area: image; justify-self: center; }
+  .hero-creds   { grid-area: creds; text-align: left; }
+
+  /* Type scales for nicer wraps */
+  .hero-section .hero-content h1 { font-size: clamp(28px, 7vw, 42px); line-height: 1.1; }
+  .hero-section .hero-content h2 { font-size: clamp(18px, 5.2vw, 26px); line-height: 1.25; }
+
+  /* Copy, CTA, image, creds sizing */
+  .hero-description { max-width: 68ch; }
+  .hero-buttons { margin-top: 10px; display: flex; justify-content: center; }
+  .hero-buttons .btn { max-width: 100%; text-align: center; }
+
+  .hero-image img{
+    width: min(92vw, 420px);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  }
+
+  .creds-stack{ justify-items: stretch; }
+  .cred-item{ max-width: 560px; width: 100%; }
+
+  /* Prevent horizontal scroll on small screens */
+  html, body { overflow-x: hidden; }
+}
+
+/* ===== Nav & form tweaks (≤768px): keep your existing behavior ===== */
+@media (max-width: 768px){
+  .mobile-menu-toggle{ display:flex; }
+
+  .nav-menu{
+    display:none; position:absolute; top:100%; left:0; right:0;
+    background:#fff; flex-direction:column; padding:1rem; box-shadow:0 5px 10px rgba(0,0,0,0.1);
+  }
+  .nav-menu.active{ display:flex; }
+  .dropdown-menu{
+    position: static; opacity:1; visibility:visible; transform:none; box-shadow:none;
+    background:#f8f9fa; display:none; margin-left:1rem;
+  }
+  .dropdown-menu.show{ display:block; }
+  .has-dropdown > a::after{ float:right; }
+
+  .hero-section{ padding: calc(var(--header-h) + 24px) 0 60px; }
+
+  .contact-form-wrapper{ grid-template-columns:1fr; }
+  .contact-form{ grid-template-columns:1fr; }
+  .contact-info-sidebar{ margin-top:2rem; }
+  .content-wrapper{ padding: 0 1rem; }
+}
+
+/* (Optional) Desktop reinforce (≥1025px) – keeps your 3-col hero explicit */
+@media (min-width: 1025px){
+  .hero-grid{
+    grid-template-columns: 1.2fr 1fr 0.9fr;  /* text | photo | creds */
+    grid-template-areas: "content image creds";
+    gap: 2rem;
+    align-items: center;
+  }
+  .hero-buttons { justify-content: flex-start; }
+  .hero-creds   { text-align: left; }
+}
