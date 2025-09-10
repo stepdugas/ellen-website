@@ -26,6 +26,8 @@
       Design Tokens (Global)
       ========================= */
       :root{
+        --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        
         /* layout */
         --header-h: 80px;
         --hero-min: 340px;
@@ -283,6 +285,9 @@
      border:none;
      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
    }
+   body.index .btn-primary {
+    background: var(--gradient-purple);
+  }
    .btn-primary:hover{
      background-color: var(--brand-dark);
      color:#fff;
@@ -416,7 +421,10 @@ body.meet-ellen a:hover {
    @media (min-width: 1200px){ body.index .services-section .services-grid{ padding: 0 2rem; } }
    
    .service-card{
-     background-color:#fff; padding:2rem; border-radius:12px; text-align:center;
+    background: var(--gradient-purple); padding:2rem; border-radius:12px; text-align:center;
+    color:#fff;
+    border: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
      transition: transform .3s ease, box-shadow .3s ease;
      position: relative; overflow:hidden; min-height:250px;
      display:flex; flex-direction:column; justify-content:center;
@@ -424,25 +432,24 @@ body.meet-ellen a:hover {
      border: 1px solid rgba(102,126,234,0.1);
    }
    .service-card::before{
-     content:''; position:absolute; inset:0;
-     background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
-     z-index:1;
-   }
+    content:none;
+  }
    .service-card > * { position: relative; z-index: 2; }
    .service-card:hover{
-     transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-   }
-   .service-card h3{ color: var(--indigo); margin-bottom:1rem; font-size:22px; }
-   .service-card p{ color:#666; }
+    transform: translateY(-6px); box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+  }
+   .service-card h3{ color:#fff; margin-bottom:1rem; font-size:22px; }
+.service-card p{ color:rgba(255,255,255,0.92); }
    
-   /* background images per card */
-   .service-card:nth-child(1){ background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop') center/cover; }
-   .service-card:nth-child(2){ background:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop') center/cover; }
-   .service-card:nth-child(3){ background:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop') center/cover; }
-   .service-card:nth-child(4){ background:url('https://images.unsplash.com/photo-1611095973763-414019e72400?w=600&h=400&fit=crop') center/cover; }
-   .service-card:nth-child(5){ background:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop') center/cover; }
-   .service-card:nth-child(6){ background:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&h=400&fit=crop') center/cover; }
-   
+  /* background images per card (disabled for gradient style) */
+/*
+.service-card:nth-child(1){ background:url('...') center/cover; }
+.service-card:nth-child(2){ background:url('...') center/cover; }
+.service-card:nth-child(3){ background:url('...') center/cover; }
+.service-card:nth-child(4){ background:url('...') center/cover; }
+.service-card:nth-child(5){ background:url('...') center/cover; }
+.service-card:nth-child(6){ background:url('...') center/cover; }
+*/
    /* =========================
       Testimonials (Home)
       ========================= */
@@ -450,14 +457,15 @@ body.meet-ellen a:hover {
      position: relative; color:#fff; padding:60px 0; overflow:hidden;
    }
    .testimonials-section::before{
-     content:''; position:absolute; inset:0; background-color: var(--brand);
-     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-     background-size: cover; z-index:0;
-   }
+    content:''; position:absolute; inset:0;
+    background: var(--gradient-purple);
+    z-index:0;
+  }
    .testimonials-section > * { position:relative; z-index:1; }
    .testimonials-section .section-title{
-     color:#fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-   }
+    color:#fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.25); /* optional for contrast */
+  }
    .testimonials-stack{ display:flex; flex-direction:column; gap:22px; }
    .testimonial-row{
      display:flex; gap:24px; background:#fff; border-radius:14px; padding:22px 24px;
