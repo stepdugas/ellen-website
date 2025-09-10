@@ -222,7 +222,10 @@
      background-color: var(--lemon);
    }
    body.coaching .page-hero h1,
-   body.coaching .page-hero .lead { color:#222; text-shadow:none; }
+   body.coaching .page-hero .lead {
+     color:#fff;
+     text-shadow: 1px 1px 3px rgba(0,0,0,0.25); /* optional for readability */
+   }
    
    body.meet-ellen .page-hero{
      background-color: var(--green);
@@ -236,7 +239,10 @@
      background-color: var(--blue);
    }
    body.costs .page-hero h1,
-   body.costs .page-hero .lead { color:#222; text-shadow:none; }
+   body.costs .page-hero .lead {
+     color:#fff;
+     text-shadow: 1px 1px 3px rgba(0,0,0,0.25); /* optional for contrast */
+   }
    
    body.contact .page-hero {
     background-color: #2ec9c8; /* teal to match button */
@@ -594,9 +600,9 @@ body.costs .page-hero{
   background-color: var(--costs-color);
 }
 body.costs .page-hero h1,
-body.costs .page-hero .lead{
-  color:#222;
-  text-shadow:none;
+body.costs .page-hero .lead {
+  color:#fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.25); /* for readability */
 }
 
 /* Content wrapper */
