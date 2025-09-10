@@ -358,7 +358,18 @@
    body.coaching .content-wrapper > h2{ margin-top: 2rem; }
 
 
+   /*MEET ELLEN*/
+   /* Meet Ellen page – make links green */
+body.meet-ellen a {
+  color: var(--green);
+  font-weight: 600;  /* optional: to match button boldness */
+  text-decoration: none;
+}
 
+body.meet-ellen a:hover {
+  color: #2d662d; /* a darker green for hover */
+  text-decoration: underline;
+}
 
 
 
